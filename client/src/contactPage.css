@@ -1,0 +1,106 @@
+@import "font.css";
+@import url("font.css"); 
+
+body, html{
+  margin:0px 0px 0px 0px ;
+  padding:0px 0px, 0px, 0px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.contact-username { 
+  font-family: RobotoRegular; 
+  color: #1b1921;  
+  font-size: 30px; 
+  display: absolute; 
+  margin-top: 20px; 
+}
+
+.dp { 
+  margin: 20px; 
+  width: 20vw; 
+}
+
+.new-chat-container {
+  display: flex;
+  justify-content: center;
+  height: 150px; 
+  line-height: 150px;
+  width: 100%; 
+  position: fixed !important; 
+  bottom: 0px; 
+  background-color: #e7c88c; 
+}
+
+.new-chat { 
+  font-family: RobotoRegular; 
+  color: #1b1921;  
+  font-size: 63px; 
+  display: inline; 
+  color: #f0f4f7; 
+}
+
+.new-chat-img { 
+  width: 75px; 
+  height: 75px; 
+  top:10%;
+  position: relative;  
+  margin: 20px; 
+}
+
+.app-header { 
+  display: flex;
+  justify-content: center;
+  height: 100px; 
+  line-height: 150px;
+  width: 100%; 
+  position: fixed !important; 
+  top: 0px; 
+  background-color: #b98966; 
+  z-index: 3; 
+}
+
+.app-header-title{ 
+  font-family: RobotoRegular; 
+  color: #1b1921;  
+  font-size: 35px; 
+  color: #f0f4f7; 
+  position: absolute; 
+  top: -20px; 
+  
+}
+
+.settings-img { 
+  width: 50px; 
+  height: 50px; 
+  top: 8px;
+  position: absolute;  
+  margin: 20px; 
+  left: 0px; 
+  text-align: left !important; 
+}
+
+.indiv-contact { 
+  text-align: #ccd1dc; 
+  top: 100px; 
+  z-index: 2; 
+  height: 80px; 
+}
+
+.all-contacts { 
+}
+
+.notification-badge { 
+  border-radius: 50%;
+  background-color: #e7c88c;  
+  width: 50px; 
+  height: 50px;
+  margin-top: 30px; 
+  left: -10px; 
+  position: absolute; 
+}
+
+.notification-badge-number { 
+  font-size: 30px; 
+  margin-top: 30px; 
+}

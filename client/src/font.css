@@ -1,0 +1,6 @@
+/* File: font.css */
+@font-face {
+    font-family: 'RobotoRegular'; 
+    src: local('RobotoRegular'), 
+    url('./fonts/Roboto-Regular.ttf') format('truetype'); 
+}

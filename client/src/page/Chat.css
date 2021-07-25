@@ -1,0 +1,77 @@
+@import "../font.css";
+@import url("../font.css"); 
+
+.notification {
+  width: 22px; 
+  height: 22px; 
+  border-radius: 50%;
+  text-align: center;
+  background: #bcd6ff;
+}
+
+.messageContent {
+  border-radius: 0%;
+  background: #ffffff;
+  color: #1b1921;
+  font-family: 'RobotoRegular', sans-serif;
+  font-size: 4px;
+  font-weight: 400;
+}
+
+.messageAudio {
+  width: 40%;
+  border-radius: 0%;
+  background: #e7c88c;
+}
+
+.navigationBar {
+  background: #b98966;
+  color: #f0f4f7;
+  font-family: 'RobotoRegular', sans-serif;
+  font-weight: 500;
+  top: 0px !important;  
+  display: flex;
+  justify-content: center;
+  height: 90px; 
+  line-height: 150px;
+  width: 100%; 
+  position: fixed !important; 
+  z-index: 3; 
+}
+
+.backarrow-img { 
+  width: 75px; 
+  height: 75px; 
+  top:10%;
+  position: relative;  
+  margin: 20px; 
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.inputButton {
+  /* width: 100%;
+  height: 100%; */
+  border-radius: 0%;
+  background: #e7c88c;  
+  margin: 2px;
+  /* margin: 3px; */
+}
+
+.inputPanel { 
+  display: flex;
+  justify-content: center;
+  height: 90px; 
+  line-height: 150px;
+  width: 100%; 
+  position: fixed !important; 
+  bottom: 0px !important; 
+  margin-bottom: 5px;
+}
