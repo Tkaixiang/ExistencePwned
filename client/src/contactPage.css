@@ -5,102 +5,118 @@ body, html{
   margin:0px 0px 0px 0px ;
   padding:0px 0px, 0px, 0px;
   max-width: 100%;
-  overflow-x: hidden;
+}
+
+.contact-page { 
+  display: flex; 
+  flex-direction: column;
+}
+
+/** app header **/
+.app-header { 
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px; 
+  position: fixed;  
+  background-color: #b98966; 
+}
+
+
+.settings-img { 
+  width: 50px; 
+  margin: 15px; 
+  flex: 0 1; 
+}
+
+.app-header-right { 
+  width: 50px; 
+}
+
+.app-header-title{ 
+  font-family: RobotoRegular; 
+  font-size: 35px; 
+  text-align: center;
+  color: #f0f4f7; 
+  flex: 1;  
+}
+
+
+/** contacts section **/ 
+.contact-list { 
+  margin-top: 100px; 
+}
+
+.indiv-contact { 
+  display: flex; 
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px; 
+  margin: 15px; 
+  height: 150px; 
+  
+  border-width: 0px;
+  border-bottom: 2px solid #b7bbc3;  
+  border-top: 2px; 
+}
+
+.dp { 
+  width: 80px; 
+  margin: 0 20px; 
 }
 
 .contact-username { 
   font-family: RobotoRegular; 
-  color: #1b1921;  
   font-size: 30px; 
-  display: absolute; 
-  margin-top: 20px; 
+  color: #1b1921;  
+  text-align: center;
+  flex: 1; 
 }
 
-.dp { 
-  margin: 20px; 
-  width: 20vw; 
+.notification-badge, .empty-notification-badge { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; 
+  height: 50px; 
+  margin: 0 20px; 
 }
 
+.notification-badge { 
+  border-radius: 50%;
+  background-color: #e7c88c;  
+}
+
+.notification-badge-number { 
+  font-size: 20px; 
+}
+
+/** new chat footer **/ 
 .new-chat-container {
   display: flex;
   justify-content: center;
-  height: 150px; 
-  line-height: 150px;
-  width: 100%; 
-  position: fixed !important; 
+  align-items: center;
+
+  width: calc(100%-20px); 
+  height: 150px;  
+  position: fixed;
+
+  padding: 20px; 
+  border-radius: 20px 20px;
   bottom: 0px; 
   background-color: #e7c88c; 
+  border: 10px solid #ccd1dc;  
+  border-top: 0px; 
 }
 
 .new-chat { 
   font-family: RobotoRegular; 
   color: #1b1921;  
   font-size: 63px; 
-  display: inline; 
   color: #f0f4f7; 
 }
 
 .new-chat-img { 
-  width: 75px; 
-  height: 75px; 
-  top:10%;
-  position: relative;  
-  margin: 20px; 
-}
-
-.app-header { 
-  display: flex;
-  justify-content: center;
-  height: 100px; 
-  line-height: 150px;
-  width: 100%; 
-  position: fixed !important; 
-  top: 0px; 
-  background-color: #b98966; 
-  z-index: 3; 
-}
-
-.app-header-title{ 
-  font-family: RobotoRegular; 
-  color: #1b1921;  
-  font-size: 35px; 
-  color: #f0f4f7; 
-  position: absolute; 
-  top: -20px; 
-  
-}
-
-.settings-img { 
-  width: 50px; 
-  height: 50px; 
-  top: 8px;
-  position: absolute;  
-  margin: 20px; 
-  left: 0px; 
-  text-align: left !important; 
-}
-
-.indiv-contact { 
-  text-align: #ccd1dc; 
-  top: 100px; 
-  z-index: 2; 
-  height: 80px; 
-}
-
-.all-contacts { 
-}
-
-.notification-badge { 
-  border-radius: 50%;
-  background-color: #e7c88c;  
-  width: 50px; 
-  height: 50px;
-  margin-top: 30px; 
-  left: -10px; 
-  position: absolute; 
-}
-
-.notification-badge-number { 
-  font-size: 30px; 
-  margin-top: 30px; 
+  width: 80px; 
+  margin: 15px; 
 }

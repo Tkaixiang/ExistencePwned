@@ -60,17 +60,17 @@
   /* width: 100%;
   height: 100%; */
   border-radius: 0%;
+  border: 10px solid red; 
   background: #e7c88c;  
   margin: 2px;
   /* margin: 3px; */
 }
 
-.inputPanel { 
+.input-panel { 
   display: flex;
   justify-content: center;
   height: 90px; 
-  line-height: 150px;
-  width: 100%; 
+  width: 100%;  
   position: fixed !important; 
   bottom: 0px !important; 
   margin-bottom: 5px;

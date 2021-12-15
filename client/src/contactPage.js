@@ -21,7 +21,9 @@ const { Api } = gramjs
 
 const Badge = ({ count }) => { 
     if (count === 0){ 
-        return null; 
+        return (
+            <div className="empty-notification-badge"></div>
+        ); 
     }
     return ( 
         <div className="notification-badge"><span className="notification-badge-number">{count}</span></div>
@@ -30,22 +32,20 @@ const Badge = ({ count }) => {
 
 const Contact = (props) => {
     return (
-        <Row gutter={[24, 48]} className="indiv-contact" style={{ "textAlign": "center"}}>
-            <Col span={6}><Image
-                className='dp'
-                src={displayPicture}
-            />
-            </Col>
-            <Col span={14}><h2 className="contact-username">{props.username}</h2></Col>
-            <Col span={4}><Badge count={props.notifications} /></Col>
-        </Row>
+        <div className="indiv-contact">
+            <img className='dp' src={displayPicture} /> 
+            <div className="contact-username">{props.username}</div>
+            <Badge count={props.notifications}></Badge>
+        </div>
     )
 }
 
 const ContactHeader = (props) => {
     return (
         <Row className="app-header">
-            <img className="settings-img" src={settingsCog} onClick={props.handleSettings}/><h2 className="app-header-title">Telegrammarly</h2>
+            <img className="settings-img" src={settingsCog} onClick={props.handleSettings}/>
+            <span className="app-header-title">Telegrammarly</span>
+            <div className="app-header-right"></div>
         </Row>
     )
 }
@@ -97,20 +97,23 @@ class ContactPage extends React.Component {
             <div style={{ "backgroundColor": "#ccd1dc", width: "100%"}}>
 
                 {!this.state.chat && !this.state.settings && (
-                    <div>
+                    <div className="contact-page">
                         <ContactHeader handleSettings={this.handleSettings} />
-
+                        
+                        <div className="contact-list">
                         {this.props.dialog
                             .map((contact) => (
-                                <div  onClick={() => this.handleContact(contact.id, contact.lastID, contact.name)} style={{marginTop: "15vh", marginBottom: "22vh"}}>
-                                    <Contact  className="all-contacts" key={contact.id} username={contact.name} notifications={contact.unread} />
+                                <div  onClick={() => this.handleContact(contact.id, contact.lastID, contact.name)}>
+                                    <Contact key={contact.id} username={contact.name} notifications={contact.unread} />
                                 </div>
                             ))}
+                        </div> 
 
 
-                        <Row className="new-chat-container">
-                            <img className="new-chat-img" src={newChat} /><h2 className="new-chat" >New Chat</h2>
-                        </Row>
+                        <div className="new-chat-container" style={{right: "0px", left: "0px"}}>
+                            <img className="new-chat-img" src={newChat} />
+                            <span className="new-chat" >New Chat</span>
+                        </div>
                     </div>
                 )}
 

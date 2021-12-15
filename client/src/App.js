@@ -14,6 +14,10 @@ const { NewMessage } = TelegramClient.events
 
 //const { Option } = Select;
 
+
+const apiId = 7251351;
+const apiHash = "766e8ba337aef7f310ec69871b519758";
+
 const production = false;
 window.ipAddress = production ? "" : "http://localhost:8000";
 
