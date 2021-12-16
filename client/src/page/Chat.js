@@ -153,9 +153,6 @@ class Chat extends React.Component {
 
     return (
       <div>
-        <Row className="navigationBar">
-          <img className="backarrow-img" src={backarrow} onClick={() => { this.props.handleBack() }} /><h2 className="group-user-name">User</h2>
-        </Row>
         <NavBar
           className="navigationBar"
           icon={<Icon type="left" />}
@@ -374,28 +371,14 @@ class Chat extends React.Component {
 
           }
           )}
-        <WingBlank>
-          <Flex className="input-panel">
-            <Flex.Item>
-              <Card
-                className="inputButton"
-              >
-                <Card.Body
-                  inline
-                >
-                  {<img src={emojiimg} alt="Emoji_Image" width="74" height="65" class="center" />}
-                </Card.Body>
-              </Card>
-            </Flex.Item>
-            <Flex.Item >
-              <Card className="inputButton" style={{ background: this.state.display }} onClick={(e) => this.recordAudio(e)}>
-                <Card.Body>
-                  {<img src={microphone} alt="Microphone" width="41" height="65" class="center" />}
-                </Card.Body>
-              </Card>
-            </Flex.Item>
-          </Flex>
-        </WingBlank>
+        <div className="input-panel">
+          <div className="inputButton">
+            <img src={emojiimg} alt="Emoji_Image" className="buttonContent" style={{width: "74px"}}/>
+          </div>
+          <div className="inputButton">
+            <img src={microphone} alt="Microphone" className="buttonContent" style={{width: "41px"}}/>
+          </div>
+        </div>
       </div>
     )
   }

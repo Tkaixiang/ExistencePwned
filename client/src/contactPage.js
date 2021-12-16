@@ -83,8 +83,7 @@ class ContactPage extends React.Component {
     }
 
     handleBack() {
-        console.log("hi")
-        this.setState({chat: false})
+        this.setState({chat: false, settings: false}); 
     }
 
     handleSettings = () => { 
@@ -122,7 +121,7 @@ class ContactPage extends React.Component {
                 )}
 
                 {!this.state.chat && this.state.settings && ( 
-                    <Settings handleLogout={this.props.handleLogout} /> 
+                    <Settings handleLogout={this.props.handleLogout} handleBack={this.handleBack.bind(this)}/> 
                 )}
 
             </div>
